@@ -12,7 +12,7 @@ body {
     /* Photographic Background Overlay */
     /* Ensure your file is named hero-bg.jpg */
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                      url('hero-bg.jpg');
+                      url('https://imgs.search.brave.com/OCVaf9E7k9qyrJFlsmOarm2Vx9jXlAKptBEqJ5bpI5Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvY3li/ZXJwdW5rLWNpdHkt/YmFja2dyb3VuZC1s/czZsYml5ZDRmN3dy/Yjk5LmpwZwgit add .');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

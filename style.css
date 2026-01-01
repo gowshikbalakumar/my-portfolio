@@ -187,3 +187,83 @@ footer { text-align: center; padding: 50px; font-size: 0.7rem; letter-spacing: 2
 .submit-btn:active {
     transform: scale(0.98); /* Button shrinks slightly when clicked */
 }
+
+/* Better spacing for the About description */
+.description {
+    margin-bottom: 20px;
+    max-width: 800px; /* Prevents lines from being too long to read */
+    font-weight: 300;
+    color: #ccc;
+}
+
+/* Highlighted first sentence */
+.highlight {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* Styling the "Always curious" section */
+.motto {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #ff00ff; /* Matches your neon accent color */
+}
+
+.motto span {
+    border-left: 2px solid #ff00ff;
+    padding-left: 10px;
+}
+
+.exp-item {
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+    transition: 0.3s;
+}
+
+.exp-item:hover {
+    border-bottom-color: #ff00ff; /* Neon highlight on hover */
+}
+
+.exp-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.exp-item h3 {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.date {
+    font-size: 0.75rem;
+    color: #ff00ff;
+    font-weight: 700;
+}
+
+.company {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin: 5px 0 15px 0;
+    font-weight: 400;
+}
+
+.exp-desc {
+    font-size: 0.85rem;
+    color: #888;
+    line-height: 1.5;
+    max-width: 700px;
+}

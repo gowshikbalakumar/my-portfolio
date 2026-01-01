@@ -267,3 +267,95 @@ footer { text-align: center; padding: 50px; font-size: 0.7rem; letter-spacing: 2
     line-height: 1.5;
     max-width: 700px;
 }
+
+/* --- Mobile Optimization (Under 768px) --- */
+@media (max-width: 768px) {
+    /* Navigation - Simplify for Mobile */
+    nav {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 15px;
+        background: rgba(0, 0, 0, 0.9); /* Solid background for readability */
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        font-size: 0.65rem;
+    }
+
+    /* Hero Section - Text Scaling */
+    .hero {
+        padding: 0 5%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem; /* Smaller but still bold */
+        letter-spacing: 8px;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Layout Containers */
+    .main-container {
+        padding: 0 5% 50px 5%;
+    }
+
+    .glass-section {
+        padding: 40px 20px;
+        margin-bottom: 50px; /* Closer sections for mobile scroll */
+    }
+
+    /* Work Grid - Single Column */
+    .work-grid {
+        grid-template-columns: 1fr; /* Stack images vertically */
+        gap: 40px;
+    }
+
+    .image-placeholder {
+        height: 250px; /* Shorter cards for mobile */
+    }
+
+    /* Experience - Fix date alignment */
+    .exp-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .date {
+        margin-bottom: 5px;
+    }
+
+    /* Form - Full width */
+    .contact-form {
+        gap: 15px;
+    }
+
+    input, textarea {
+        font-size: 16px; /* Prevents iOS from zooming in on focus */
+    }
+}
+
+/* --- Small Mobile (Under 480px) --- */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .logo {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+}

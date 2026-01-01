@@ -1,4 +1,8 @@
-/* 1. Global Reset */
+/* --- Root & Reset --- */
+html {
+    scroll-behavior: smooth; /* Essential for the Explore button slide */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,127 +13,177 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
     color: #fff;
-    /* Photographic Background Overlay */
-    /* Ensure your file is named hero-bg.jpg */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                      url('images/cyberpunk-city-background-ls6lbiyd4f7wrb99.webp');
+    line-height: 1.6;
+    /* BACKGROUND IMAGE SETTINGS */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), 
+                      url('images/cyberpunk-hallway-with-neon-lights.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-    overflow-x: hidden;
+    background-attachment: fixed; /* Keeps image still while scrolling */
 }
 
-/* 2. Navigation */
+/* --- Navigation --- */
 nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5rem 8%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 8%;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
 }
 
 .logo {
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    text-transform: uppercase;
+    margin-left: 30px;
+    font-size: 0.7rem;
     letter-spacing: 2px;
-    font-size: 0.75rem;
-    margin-left: 25px;
-    transition: color 0.3s ease;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: #888;
-}
+.nav-links a:hover { color: #ff00ff; }
 
-/* 3. Hero Section */
+/* --- Hero Section --- */
 .hero {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    padding: 0 10%;
+}
+
+.hero-content h1 {
+    font-size: clamp(3rem, 10vw, 6rem);
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    line-height: 0.9;
+    margin: 20px 0;
 }
 
 .subtitle {
-    font-weight: 300;
-    letter-spacing: 12px;
+    letter-spacing: 8px;
     text-transform: uppercase;
-    margin-bottom: 1.5rem;
     color: #bbb;
-    font-size: 0.9rem;
-}
-
-h1 {
-    font-size: clamp(2.5rem, 8vw, 4.5rem); /* Fluid sizing for mobile */
-    font-weight: 700;
-    letter-spacing: 15px;
-    text-transform: uppercase;
-    margin-bottom: 2.5rem;
-}
-
-/* 4. Buttons & Links */
-.cta-container {
-    margin-bottom: 3rem;
+    font-size: 0.8rem;
 }
 
 .explore-btn {
     display: inline-block;
+    padding: 15px 35px;
+    border: 1px solid #fff;
     color: #fff;
     text-decoration: none;
+    letter-spacing: 3px;
     font-size: 0.8rem;
-    letter-spacing: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 18px 40px;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-top: 30px;
+    transition: 0.4s;
 }
 
 .explore-btn:hover {
-    background-color: #fff;
+    background: #fff;
     color: #000;
-    border-color: #fff;
 }
 
-/* 5. Social Icons */
-.social-links {
+.social-links { margin-top: 40px; }
+.social-links a { color: #fff; font-size: 1.2rem; margin-right: 25px; opacity: 0.6; transition: 0.3s; }
+.social-links a:hover { opacity: 1; transform: translateY(-3px); }
+
+/* --- Scrolling Main Content --- */
+.main-container {
+    padding: 0 10% 100px 10%;
+}
+
+.glass-section {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 80px 60px;
+    margin-bottom: 100px;
+    max-width: 1000px;
+}
+
+.section-header {
+    margin-bottom: 40px;
     display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.number { color: #ff00ff; font-weight: 700; letter-spacing: 2px; }
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 1.8rem;
+}
+
+/* --- Specific Section Elements --- */
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.image-placeholder {
+    background: rgba(255,255,255,0.1);
+    height: 300px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 35px;
+    border: 1px solid rgba(255,255,255,0.05);
+    margin-bottom: 10px;
 }
 
-.social-links a {
+.exp-item { margin-bottom: 30px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+
+/* --- Contact Form --- */
+.contact-form { display: flex; flex-direction: column; gap: 20px; }
+
+input, textarea {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 15px;
     color: #fff;
-    font-size: 1.4rem;
-    transition: all 0.3s ease;
-    opacity: 0.5;
+    font-family: inherit;
 }
 
-.social-links a:hover {
-    opacity: 1;
-    transform: translateY(-3px);
+.submit-btn {
+    background: #ff00ff;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    cursor: pointer;
 }
 
-/* 6. Mobile Responsiveness */
+footer { text-align: center; padding: 50px; font-size: 0.7rem; letter-spacing: 2px; opacity: 0.5; }
+
+/* --- Responsive --- */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 20px;
-        padding: 2rem 5%;
-    }
-    
-    .nav-links a {
-        margin: 0 10px;
-    }
+    .glass-section { padding: 40px 20px; }
+    .work-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 3rem; }
+}
 
-    h1 {
-        letter-spacing: 8px;
-    }
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #ff00ff; /* Pink neon highlight when typing */
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.submit-btn:active {
+    transform: scale(0.98); /* Button shrinks slightly when clicked */
 }
